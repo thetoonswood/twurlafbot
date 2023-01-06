@@ -306,33 +306,33 @@ If You Do No See The Requested Movie/Series File, Look At The Next Page
 """
 
     MINFO = """
-⋯⋯ Movie Request Format ⋯⋯
+<b>⋯⋯ Movie Request Format ⋯⋯</b>
 
-Go To Google ➠ Type Movie Name ➠ Copy Correct Name ➠ Paste Copied Movie Name In Group
+<b>Go To Google ➠ Type Movie Name ➠ Copy Correct Name ➠ Paste Copied Movie Name In Group</b>
 
-Example : Chhota Bheem Aur Krishna
+<b>Example : Chhota Bheem Aur Krishna</b>
 
-🚯 ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)
+<b>🚯 Don't Use ➠ ':(!,./)</b>
 """
 
 
     SINFO = """
-⋯⋯ Series Request Format ⋯⋯
+<b>⋯⋯ Series Request Format ⋯⋯</b>
 
-Go To Google ➠ Type Movie Name ➠ Copy Correct Name ➠ Paste Copied Series Name In Group
+<b>Go To Google ➠ Type Movie Name ➠ Copy Correct Name ➠ Paste Copied Series Name In Group</b>
 
-Example : Chhota Bheem S01E01 or S01 E01
+<b>Example : Chhota Bheem S01E01 or S01 E01</b>
 
-🚯 Don't Use ➠ ':(!,./)
+<b>🚯 Don't Use ➠ ':(!,./)</b>
 """
 
 
     PAGEINFO = """
-Pages Means 10 Files In One Page
+<b>Pages Means 10 Files In One Page</b>
 
-If you Not See Your Files On This Page Then Click On Next Page.
+<b>If you Not See Your Files On This Page Then Click On Next Page.</b>
 
-Powered By :- ToonsWood.In
+<b>Powered By :- ToonsWood.In『🇮🇳』</b>
 """
 
     SPLMD = """
@@ -346,7 +346,7 @@ Example : Shiva S01E01 or S01 E01
 
 🚯Don't Use ➠ ':(!,./)
 
-Powered By :- ToonsWood.In
+Powered By :- ToonsWood.In『🇮🇳』
 """
     
     REQUEST_TXT = """
