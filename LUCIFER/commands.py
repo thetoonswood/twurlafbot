@@ -8,7 +8,7 @@ from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id
 from database.users_chats_db import db
-from info import CHANNELS, ADMINS, AUTH_CHANNEL, AUTH_GROUPS, LOG_CHANNEL, RQST_LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, CHNL_LNK, GRP_LNK, SUPPORT_GROUP
+from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, RQST_LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, CHNL_LNK, GRP_LNK, SUPPORT_GROUP
 from utils import get_settings, get_size, is_subscribed, save_group_settings, temp
 from database.connections_mdb import active_connection
 import re
@@ -606,10 +606,10 @@ async def save_template(client, message):
     await save_group_settings(grp_id, 'template', template)
     await sts.edit(f"**Successfully Changed Template For `{title}` To**\n\n`{template}`")
 
-@Client.on_message((filters.regex("#request")) & filters.chat(chats=AUTH_GROUPS) & filters.chat(SUPPORT_GROUP))
+@Client.on_message((filters.regex("#request")) & filters.chat(SUPPORT_GROUP))
 async def request(bot, message):
     if message.text in ['#request']:
-        await message.reply_text(text = '<code>USE CORRECT FORMAT...</code>', quote = True)
+        await message.reply_text(text = '<b>USE CORRECT REQUEST FORMAT...</b>', quote = True)
         return
     grqmsg = await message.reply_text(
             text=script.REQUEST2_TXT,
