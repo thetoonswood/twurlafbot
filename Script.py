@@ -391,7 +391,7 @@ The Request Is Already Uploaded !! Check Bot & Channel !!
     REQ_REJECT2 = """
 <b>Request Rejected 🚫 !!
 
-Your Request Already MAybe In The Request List Or Your Request Is Malformatted. Kindly Request Again Or Contact Admin For Help.</b>
+Your Request Already Maybe In The Request List Or Your Request Is Malformatted. Kindly Request Again Or Contact Admin For Help.</b>
 """
 
     REQ_NO2 = """
