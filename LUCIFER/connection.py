@@ -13,7 +13,7 @@ logger.setLevel(logging.ERROR)
 async def addconnection(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"**Yᴏᴜʀ Aʀᴇ Aɴᴏɴʏᴍᴏᴜs Aᴅᴍɪɴ. Usᴇ `/connect {message.chat.id}` Iɴ PM**")
+        return await message.reply(f"**You Are Anonymous Admin. Use `/connect {message.chat.id}` In PM**")
     chat_type = message.chat.type
 
     if chat_type == enums.ChatType.PRIVATE:
@@ -57,11 +57,11 @@ async def addconnection(client, message):
             addcon = await add_connection(str(group_id), str(userid))
             if addcon:
                 await message.reply_text(
-                    f"**Sᴜᴄᴄᴇssғᴜʟʟʏ Cᴏɴɴᴇᴄᴛᴇᴅ ᴛᴏ {title}**\n**Nᴏᴡ Mᴀɴᴀɢᴇ Yᴏᴜʀ Gʀᴏᴜᴘ Fʀᴏᴍ Mʏ PM !**",
+                    f"**Successfully Connected To {title}**\n**Now Manage Your Group From My PM !**",
                     quote=True,
                     reply_markup=InlineKeyboardMarkup(
                                            [[
-                                             InlineKeyboardButton('ɢᴏ ᴛᴏ ᴘᴍ', url=f"https://t.me/{temp.U_NAME}")
+                                             InlineKeyboardButton('Go To PM', url=f"https://t.me/{temp.U_NAME}")
                                            ]]
                     ),
                     parse_mode=enums.ParseMode.MARKDOWN
@@ -74,14 +74,14 @@ async def addconnection(client, message):
                     )
             else:
                 await message.reply_text(
-                    "**𝚈𝙾𝚄'𝚁𝙴 𝙰𝙻𝚁𝙴𝙰𝙳𝚈 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙴𝙳 𝚃𝙾 𝚃𝙷𝙸𝚂 𝙶𝚁𝙾𝚄𝙿 !**",
+                    "**You're Already Connected To This Group !**",
                     quote=True
                 )
         else:
-            await message.reply_text("Aᴅᴅ ᴍᴇ ᴀs ᴀɴ Aᴅᴍɪɴ ɪɴ Gʀᴏᴜᴘ.", quote=True)
+            await message.reply_text("Add Me As An Admin In Group.", quote=True)
     except Exception as e:
         logger.exception(e)
-        await message.reply_text('Sᴏᴍᴇ Eʀʀᴏʀ Oᴄᴄᴜʀʀᴇᴅ! Tʀʏ Aɢᴀɪɴ Lᴀᴛᴇʀ.', quote=True)
+        await message.reply_text('Some Error Occurred! Try Again Later.', quote=True)
         return
 
 
@@ -89,7 +89,7 @@ async def addconnection(client, message):
 async def deleteconnection(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"**Yᴏᴜʀ Aʀᴇ Aɴᴏɴʏᴍᴏᴜs Aᴅᴍɪɴ. Usᴇ `/connect {message.chat.id}` Iɴ PM**")
+        return await message.reply(f"**You Are Anonymous Admin. Use `/connect {message.chat.id}` In PM**")
     chat_type = message.chat.type
 
     if chat_type == enums.ChatType.PRIVATE:
