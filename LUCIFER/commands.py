@@ -606,9 +606,9 @@ async def save_template(client, message):
     await save_group_settings(grp_id, 'template', template)
     await sts.edit(f"**Successfully Changed Template For `{title}` To**\n\n`{template}`")
 
-@Client.on_message((filters.regex("#request")) & filters.chat(SUPPORT_GROUP))
+@Client.on_message((filters.regex("#request", "Request", "req")) & filters.chat(SUPPORT_GROUP))
 async def request(bot, message):
-    if message.text in ['#request']:
+    if message.text in ['#request', "Request", "req"]:
         await message.reply_text(text = '<b>USE CORRECT REQUEST FORMAT...</b>', quote = True)
         return
     grqmsg = await message.reply_text(
